@@ -1,0 +1,28 @@
+{
+  "name": "libcommand",
+  "version": "0.1.0",
+  "description": "Library for asynchronous command handling",
+  "main": " CommandHandler.js ",
+  "dependencies": {
+    "columnify": "^1.5.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "command"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CSSDC/libcommand.git"
+  },
+  "keywords": [
+    "libcommand",
+    "commandhandler",
+    "commands"
+  ],
+  "author": "Sean Oberoi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CSSDC/libcommand/issues"
+  },
+  "homepage": "https://github.com/CSSDC/libcommand#readme"
+}
