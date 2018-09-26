@@ -51,7 +51,7 @@ var List =
         desc: "Send a server wide message",
         run: (msg, parent) =>
         {
-            parent.Userbase.sendServerMsg(msg)
+            parent.userBase.sendServerMessage(msg)
         }
     }
 }
