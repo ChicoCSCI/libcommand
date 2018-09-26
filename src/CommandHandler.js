@@ -45,6 +45,14 @@ var List =
         {
             process.exit();
         }
+    },
+    "say":
+    {
+        desc: "Send a server wide message",
+        run: (msg, parent) =>
+        {
+            parent.Userbase.sendServerMsg(msg)
+        }
     }
 }
 
