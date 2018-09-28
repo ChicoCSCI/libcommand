@@ -1,7 +1,6 @@
 var columnify = require('columnify');
 
-var List =
-{
+var List = {
     "?":
     {
         alias: "help"
@@ -25,33 +24,6 @@ var List =
             }
 
             Logger.print(columnify(cmds, {columnSplitter: ' - ', showHeaders: false}).blue.bold);
-        },
-    },
-
-    "q":
-    {
-        alias: "exit"
-    },
-
-    "quit":
-    {
-        alias: "exit"
-    },
-
-    "exit":
-    {
-        desc: "Stops the server",
-        run: (rest) =>
-        {
-            process.exit();
-        }
-    },
-    "say":
-    {
-        desc: "Send a server wide message",
-        run: (msg, parent) =>
-        {
-            parent.userBase.sendServerMessage(msg)
         }
     }
 }
@@ -61,9 +33,14 @@ class CommandHandler
     /*
     Initializes a new instance of the parent class
     */
-    constructor(parent)
+    constructor(parent, commands)
     {
-        this.parent = parent;
+        this.parent = parent
+        for (var key in commands) {
+            if (commands.hasOwnProperty(key)) {
+                List[key] = commands[key];
+            }
+        }
     }
 
     /*
